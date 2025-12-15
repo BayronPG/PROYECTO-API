@@ -10,5 +10,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
+
+// MySQL Local Database Configuration
+DATABASE_URL="mysql://root:password@localhost:3306/proyecto_db"
